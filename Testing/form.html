@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		#title{
+			color: #EE1A1A;
+			text-align: center;
+			font-size: 24px;
+			font-weight: 5px;
+			letter-spacing:20px;
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<h1 id="title">Form</h1>
+
+		<form  method="post" name="form1">
+			<input type="text" name="age">
+			<input type="button" value="Submit" onclick="submitForm()">
+		</form>
+	</div>
+	
+</body>
+<script>
+	function submitForm(){
+		if(form1.age.value==""){
+			form1.age.style.backgroundColor='red';
+			alert("年齢をはいれてください");
+			return false;
+		}else{
+			form1.action='./submit.html';
+			form1.submit();
+		}
+	}
+</script>
+</html>
